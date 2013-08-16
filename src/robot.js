@@ -1,32 +1,3 @@
-//
-
-// function  orient(direction) {
-//  return direction;
-//}
-
-// function advance(spaces, currentDirection)
-// {
-//  var xAxis = 0;
-//  var yAxis = 0;
-//  if (currentDirection == 'west')
-//  {
-//    xAxis = (xAxis - spaces);
-//  }
-//  else if (currentDirection == 'north')
-//  {
-//    yAxis = (spaces + yAxis);
-//  }
-//  else if (currentDirection == 'east')
-//  {
-//    xAxis = (xAxis + spaces);
-//  }
-//  else (currentDirection == 'south')
-//  {
-//    yAxis = (yAxis - spaces);
-//  }
-//  return [xAxis, yAxis];
-// }
-
 var Robot = function () {
   xAxis = 0;
   yAxis = 0;
@@ -42,11 +13,6 @@ Robot.prototype.orient = function (direction) {
   this.bearing = direction;
   return "The robot is pointed " + direction;
 };
-
-var a = new Robot();
-console.log (a);
-// console.log (a.at(3,0));
-// console.log (a.orient('east'));
 
 Robot.prototype.advance = function() {
 
@@ -107,43 +73,3 @@ Robot.prototype.turnRight = function() {
     this.orient('north');
   }
 };
-
-console.log (a.bearing);
-a.orient('east');
-// console.log(a.orient('east'));  //this will return something other than 'undefined' only because it is programed into the function
-// console.log (a.bearing);  //if no statement is programmed into the orient fxn, double check the bearings...
-console.log(a.valueOf());  //returns data for the instance object
-console.log (a.advance());
-
-// console.log (a.coordinates);
-// console.log (a.turnLeft());
-// console.log (a.turnRight());
-
-
-
-
-// function turnRight(turns, currentDirection) {
-//  var x = 0;
-//  var y = 0;
-//  if (currentDirection == 'west') {
-//    newDirection = x
-//  }
-//  var newDirection = x + turns;
-//  return newDirection;
-// }
-
-// function turnLeft(turns) {
-//  var newDirection = x - turns;
-//  return newDirection;
-// }
-
-// console.log(advance(10,'west'));
-
-
-
-// // function
-// console.log(orient('west'));
-// console.log(turnRight(2));
-// console.log(turnLeft(2));
-// console.log(x);
-// console.log(y);
